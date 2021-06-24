@@ -17,11 +17,7 @@ const Home = ({...props}) => {
             num:one
         })
     }
-    const getjson = ()=>{
-        incrementAsync()
-    }
     const jj = () =>{
-        // incrementAsync()
         let one = num-1
         updateState({
             num:one
@@ -36,7 +32,6 @@ const Home = ({...props}) => {
         <div>
             <p>{num}</p>
             <p><button onClick={add}>+1</button><button onClick={jj}>-1</button></p>
-            <p><button onClick={getjson}>异步获取数据</button></p>
             <p><button onClick={loginOut}>退出</button></p>
         </div>
     );

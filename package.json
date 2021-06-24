@@ -79,6 +79,7 @@
   "scripts": {
     "start": "node scripts/start.js dev",
     "build:test": "node scripts/build.js test",
+    "build:pre": "node scripts/build.js pre",
     "build:prod": "node scripts/build.js prod",
     "test": "node scripts/test.js",
     "server": "node ./server/index.js"
