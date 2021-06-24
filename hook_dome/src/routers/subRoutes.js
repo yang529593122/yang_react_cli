@@ -31,8 +31,6 @@ iframeRoutes.forEach(item0 => {
 })
 
 const SubRoute = () => {
-    console.log(222)
-
     return (
         <Switch>
             {routeList.map(value => {

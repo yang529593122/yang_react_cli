@@ -2,12 +2,16 @@
  * Time: 2021/6/22.
  * Author: Yang PengFei
  */
+import React, { useState, useEffect } from 'react';
 import { connect } from "react-redux";
 
 const Home = ({...props}) => {
-    const { num ,incrementAsync,updateState} = props
+    const { num ,incrementAsync,updateState,incrementAsyncPost} = props
+    useEffect(() => {
+        incrementAsync({ q:"肖申克的救赎", page: 0 })
+        incrementAsyncPost()
+    },[]);
     const add = () =>{
-        // incrementAsync()
         let one = num+1
         updateState({
             num:one
