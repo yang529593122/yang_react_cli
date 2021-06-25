@@ -1,4 +1,5 @@
 项目启动  
+   yarn install   
    yarn start
   
 测试环境      
