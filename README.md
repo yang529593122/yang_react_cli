@@ -12,3 +12,8 @@
     yarn build:prod  
 
 
+
+koa server  启动   
+yarn server   
+
+
