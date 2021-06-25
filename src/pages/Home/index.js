@@ -2,37 +2,38 @@
  * Time: 2021/6/22.
  * Author: Yang PengFei
  */
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from "react-redux";
+import {Button} from "antd";
+import "./index.less"
 
 const Home = ({...props}) => {
-    const { num ,incrementAsync,updateState,incrementAsyncPost} = props
+    const { num,history,incrementAsync,updateState,incrementAsyncPost} = props
     useEffect(() => {
-        incrementAsync({ q:"肖申克的救赎", page: 0 })
         incrementAsyncPost()
     },[]);
     const add = () =>{
-        let one = num+1
-        updateState({
-            num:one
-        })
+        updateState({num:num+1})
     }
-    const jj = () =>{
-        let one = num-1
-        updateState({
-            num:one
-        })
+    const subtraction = () =>{
+        updateState({num:num-1})
+    }
+    const getHomeData = ()=>{
+        incrementAsync({ q:"肖申克的救赎", page: 0 })
     }
     const loginOut = () =>{
-        const { history } =props
         localStorage.clear()
         history.push('/login')
     }
     return (
-        <div>
+        <div className="home">
             <p>{num}</p>
-            <p><button onClick={add}>+1</button><button onClick={jj}>-1</button></p>
-            <p><button onClick={loginOut}>退出</button></p>
+            <p>
+                <Button onClick={add}>+1</Button>
+                <Button onClick={subtraction}>-1</Button>
+                <Button onClick={getHomeData}>send axios</Button>
+            </p>
+            <p><Button onClick={loginOut}>退出</Button></p>
         </div>
     );
 };

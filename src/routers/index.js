@@ -5,6 +5,7 @@
 import React from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import lazy from './LazyComponent';
+const Nopage = () =>  import('../Layout/404');
 const Login = () => import('../pages/Login');
 const BaseLayout = ()=> import('../Layout/BaseLayout');
 const Public = () => import('../pages/Public');
@@ -15,6 +16,7 @@ export default () => {
             <Route path='/login' component={lazy(Login)} exact  key='login' />
             <Route path='/public' component={lazy(Public)} exact  key='public' />
             <Route path="/app" component={lazy(BaseLayout)}  key="app" />
+            <Route component={lazy(Nopage)} />
         </Switch>
     );
 };

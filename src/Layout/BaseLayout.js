@@ -5,19 +5,17 @@
 import React from 'react';
 import {Link} from "react-router-dom"
 import Routes from '../routers/subRoutes'
-import { Button } from 'antd';
+import "./styles/index.less"
 
 const Laypout = () => {
     return (
         <div>
-            <nav>
-                <Link to="/app/home">首页</Link>
-                <Link to="/app/user">用户中心</Link>
-                <Button>anni</Button>
+            <nav className="nav">
+                <Link className='link_a' to="/public">公有路由</Link>
+                <Link className='link_a' to="/app/home">首页</Link>
+                <Link className='link_a' to="/app/user">用户中心</Link>
             </nav>
-            <div>
-                <Routes />
-            </div>
+            <Routes />
         </div>
     );
 };

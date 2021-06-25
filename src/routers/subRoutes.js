@@ -29,7 +29,6 @@ iframeRoutes.forEach(item0 => {
         routeList.push(item0)
     }
 })
-
 const SubRoute = () => {
     return (
         <Switch>
@@ -37,11 +36,10 @@ const SubRoute = () => {
                 return (
                     <PrivateRoute
                         exact
+                        isLogin={value.isLogin}
                         path={value.path}
                         key={value.path}
                         component={lazy(value.component)}
-                        isIframe={value.isIframe}
-                        id={value.id}
                     />
                 )
             })}

@@ -3,7 +3,7 @@
  * Author: Yang PengFei
  */
 // 定义常量
-console.log(process.env.REACT_APP_ENV,999)
+console.log('当前项目运行环境 ----->', process.env.REACT_APP_ENV)
 
 const BaseUrl ={
     dev:'http://127.0.0.1:8000', // 开发环境

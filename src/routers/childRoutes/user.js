@@ -10,6 +10,7 @@ export const user=[
     {
         path: '/app/user',
         name:'user',
+        isLogin:true,
         component: ()=> import('../../pages/User'),
     }
 ]
