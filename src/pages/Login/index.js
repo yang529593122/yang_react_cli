@@ -7,9 +7,10 @@ import {Button} from "antd";
 
 const Login = (props) => {
     const {history} = props
+    let url= history.location.search ? history.location.search.slice(5,history.location.search.length) : '/app/home'
     const login = ()=>{
         localStorage.setItem('token','yang')
-        history.push('/app/home')
+        history.push(url)
     }
     return (
         <div>

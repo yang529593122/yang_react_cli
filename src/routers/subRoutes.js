@@ -36,7 +36,7 @@ const SubRoute = () => {
                 return (
                     <PrivateRoute
                         exact
-                        isLogin={value.isLogin}
+                        isLogin={value.isLogin || false }
                         path={value.path}
                         key={value.path}
                         component={lazy(value.component)}

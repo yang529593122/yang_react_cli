@@ -14,7 +14,7 @@ export default () => {
         <Switch>
             <Route path="/" render={() => <Redirect to="/login" />} exact key="first" />
             <Route path='/login' component={lazy(Login)} exact  key='login' />
-            <Route path='/public' component={lazy(Public)} exact  key='public' />
+
             <Route path="/app" component={lazy(BaseLayout)}  key="app" />
             <Route component={lazy(Nopage)} />
         </Switch>

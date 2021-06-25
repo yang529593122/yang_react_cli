@@ -21,10 +21,7 @@ const Home = ({...props}) => {
     const getHomeData = ()=>{
         incrementAsync({ q:"肖申克的救赎", page: 0 })
     }
-    const loginOut = () =>{
-        localStorage.clear()
-        history.push('/login')
-    }
+
     return (
         <div className="home">
             <p>{num}</p>
@@ -33,7 +30,7 @@ const Home = ({...props}) => {
                 <Button onClick={subtraction}>-1</Button>
                 <Button onClick={getHomeData}>send axios</Button>
             </p>
-            <p><Button onClick={loginOut}>退出</Button></p>
+
         </div>
     );
 };

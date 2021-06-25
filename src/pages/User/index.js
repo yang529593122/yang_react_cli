@@ -3,11 +3,17 @@
  * Author: Yang PengFei
  */
 import React from 'react';
+import {Button} from "antd";
 
-const User = () => {
+const User = (props) => {
+    const {history} = props;
+    const loginOut = () =>{
+        localStorage.clear()
+        history.push('/login')
+    }
     return (
         <div>
-            用户
+            <p><Button onClick={loginOut}>退出</Button></p>
         </div>
     );
 };

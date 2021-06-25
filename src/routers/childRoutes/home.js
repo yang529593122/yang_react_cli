@@ -7,7 +7,6 @@
     {
         path: '/app/home',
         name:'home',
-        isLogin: false,
         component: ()=> import('../../pages/Home'),
     }
 ]
