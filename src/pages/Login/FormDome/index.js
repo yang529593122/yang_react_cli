@@ -41,7 +41,7 @@ const FormDome = () => {
                     span: 8,
                 }}
                 wrapperCol={{
-                    span: 16,
+                    span: 10,
                 }}
                 onFinish={onFinish}
                 onFinishFailed={onFinishFailed}
@@ -63,7 +63,7 @@ const FormDome = () => {
                 <Form.Item
                     wrapperCol={{
                         offset: 8,
-                        span: 16,
+                        span: 10,
                     }}
                 >
                     <Button type="primary" htmlType="submit">
