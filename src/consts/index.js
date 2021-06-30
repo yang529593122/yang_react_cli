@@ -16,3 +16,9 @@ const BaseUrl ={
 export {
     BaseUrl
 }
+
+export const FormData = [
+    { label:"用户", name:"username", type:"input" },
+    { label:"密码", name:"password", type:"password" },
+    { label:"下拉", name:"select", type:"select" },
+]

@@ -4,6 +4,7 @@
  */
 import React from 'react';
 import {Button} from "antd";
+import FormDome from "./FormDome"
 
 const Login = (props) => {
     const {history} = props
@@ -15,6 +16,8 @@ const Login = (props) => {
     return (
         <div>
             <Button onClick={login}>登录</Button>
+            <p></p>
+            <FormDome />
         </div>
     );
 };
