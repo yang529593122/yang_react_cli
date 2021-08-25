@@ -8,7 +8,7 @@ import {Button} from "antd";
 import "./index.less"
 
 const Home = ({...props}) => {
-    const { num,history,incrementAsync,updateState,incrementAsyncPost} = props
+    const { num,incrementAsync,updateState,incrementAsyncPost} = props
     useEffect(() => {
         incrementAsyncPost()
     },[]);

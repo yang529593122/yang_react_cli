@@ -148,7 +148,7 @@ module.exports = function (webpackEnv) {
           loader,
           options: {
             modifyVars: { //自定义主题
-              'primary-color':'#1DA57A',
+             'primary-color':'#1DA57A',
             },
             javascriptEnabled: true,
           }
@@ -408,7 +408,7 @@ module.exports = function (webpackEnv) {
                     },
                   ],
                 ],
-                
+
                 plugins: [
                   [
                     require.resolve('babel-plugin-named-asset-import'),
@@ -453,7 +453,7 @@ module.exports = function (webpackEnv) {
                 cacheDirectory: true,
                 // See #6846 for context on why cacheCompression is disabled
                 cacheCompression: false,
-                
+
                 // Babel sourcemaps are needed for debugging into node_modules
                 // code.  Without the options below, debuggers like VSCode
                 // show incorrect code and set breakpoints on the wrong lines.

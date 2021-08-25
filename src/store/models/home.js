@@ -19,12 +19,12 @@ export default {
     },
     effects: {
         async incrementAsync(payload, rootState) {
-            let data = await getRequest(`${BaseUrl}/article/list`,payload)
+           // let data = await getRequest(`${BaseUrl}/article/list`,payload)
             // console.log(data,888)
 
         },
         async incrementAsyncPost(payload, rootState) {
-            let data = await postRequest(`${BaseUrl}/article/item`,payload)
+           // let data = await postRequest(`${BaseUrl}/article/item`,payload)
             // console.log(data,888)
 
         },
