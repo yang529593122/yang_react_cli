@@ -29,12 +29,6 @@ const ModalFormCom = ({formData,modal,onCancel,onOk}) => {
         <Modal { ...modal } onCancel={()=>{onCancel()}}  okButtonProps={{form:'ModalFormId', key: 'submit', htmlType: 'submit'}} >
             <Form
                 id='ModalFormId'
-                labelCol={{
-                    span: 8,
-                }}
-                wrapperCol={{
-                    span: 10,
-                }}
                 onFinish={onOk}
             >
                 {
@@ -42,8 +36,7 @@ const ModalFormCom = ({formData,modal,onCancel,onOk}) => {
                         return (
                             <Form.Item
                                 key={index}
-                                label={ item.label }
-                                name={ item.name }
+                                {...item}
                             >
                                 {renderItem(item)}
                             </Form.Item>
