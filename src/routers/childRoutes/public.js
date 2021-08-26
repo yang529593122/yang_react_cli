@@ -7,6 +7,11 @@ const publics = [
         path: '/app/public/modalformcom',
         name:'ModalFormCom',
         component: ()=> import('../../pages/Public/ModalFormCom'),
+    },
+    {
+        path: '/app/public/phonetimecom',
+        name:'PhoneTimeCom',
+        component: ()=> import('../../pages/Public/PhoneTimeCom'),
     }
 ]
 export default publics
