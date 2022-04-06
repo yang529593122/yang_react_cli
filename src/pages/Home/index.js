@@ -5,12 +5,13 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Button } from "antd";
-import "./index.less";
+import styles from "./index.less";
 
 const Home = ({ ...props }) => {
   const { num, incrementAsync, updateState, incrementAsyncPost } = props;
   useEffect(() => {
     incrementAsyncPost();
+    console.log(styles);
   }, []);
   const add = () => {
     updateState({ num: num + 1 });
@@ -23,7 +24,7 @@ const Home = ({ ...props }) => {
   };
 
   return (
-    <div className="home">
+    <div className={styles.home}>
       <p>{num}</p>
       <p>
         <Button onClick={add}>+1</Button>
