@@ -3,10 +3,11 @@
  * Author: Yang PengFei
  */
 import React from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Redirect, Route } from "react-router-dom";
 
 const PrivateRoute = ({ component: Component, location, isLogin, ...rest }) => {
   const token = localStorage.getItem("token") ? true : false;
+  console.log(isLogin, 9999);
   return isLogin ? (
     token ? (
       <Route {...rest} render={(props) => <Component {...props} />} />

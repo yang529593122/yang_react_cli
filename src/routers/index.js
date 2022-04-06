@@ -5,9 +5,9 @@
 import React from "react";
 import { Route, Redirect, Switch } from "react-router-dom";
 import lazy from "./LazyComponent";
-const Nopage = () => import("../Layout/404");
+const Nopage = () => import("../layout/404");
 const Login = () => import("../pages/Login");
-const BaseLayout = () => import("../Layout/BaseLayout");
+const BaseLayout = () => import("../layout/BaseLayout");
 const Public = () => import("../pages/Public/ModalFormCom");
 export default () => {
   return (

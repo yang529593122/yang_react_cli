@@ -2,37 +2,11 @@
  * Time: 2021/6/22.
  * Author: Yang PengFei
  */
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
-import { Button } from "antd";
-import styles from "./index.less";
 
 const Home = ({ ...props }) => {
-  const { num, incrementAsync, updateState, incrementAsyncPost } = props;
-  useEffect(() => {
-    incrementAsyncPost();
-    console.log(styles);
-  }, []);
-  const add = () => {
-    updateState({ num: num + 1 });
-  };
-  const subtraction = () => {
-    updateState({ num: num - 1 });
-  };
-  const getHomeData = () => {
-    incrementAsync({ q: "肖申克的救赎", page: 0 });
-  };
-
-  return (
-    <div className={styles.home}>
-      <p>{num}</p>
-      <p>
-        <Button onClick={add}>+1</Button>
-        <Button onClick={subtraction}>-1</Button>
-        <Button onClick={getHomeData}>send axios</Button>
-      </p>
-    </div>
-  );
+  return <>home页面</>;
 };
 
 export default connect(

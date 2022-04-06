@@ -5,7 +5,7 @@
 import React from "react";
 import { Switch } from "react-router-dom";
 import lazy from "./LazyComponent";
-import Nopage from "../Layout/404";
+import Nopage from "../layout/404";
 import PrivateRoute from "./PrivateRoute";
 
 const files = require.context("./childRoutes", false, /\.js$/);
@@ -48,8 +48,4 @@ const SubRoute = () => {
   );
 };
 
-export default () => (
-  <div style={{ margin: "0 16px" }}>
-    <SubRoute />
-  </div>
-);
+export default () => <SubRoute />;
