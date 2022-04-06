@@ -11,10 +11,10 @@ const config = {
   // 数据库配置
   database: {
     DATABASE: "ypf",
-    USERNAME: "yang",
-    PASSWORD: "ypf123456",
+    USERNAME: "root",
+    PASSWORD: "123456",
     PORT: "3306",
-    HOST: "192.168.30.200",
+    HOST: "127.0.0.1",
   },
 };
 

@@ -456,7 +456,7 @@ module.exports = function (webpackEnv) {
                     {
                       libraryName: "antd",
                       libraryDirectory: "es",
-                      style: true,
+                      style: "css",
                     },
                   ],
                   isEnvDevelopment &&

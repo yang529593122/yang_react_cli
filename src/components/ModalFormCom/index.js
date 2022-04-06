@@ -7,21 +7,34 @@ import React from "react";
 import { Form, Input, Modal, Select } from "antd";
 
 const ModalFormCom = ({ formData, modal, onCancel, onOk }) => {
-  const renderItem = (item) => {
+  const renderItem = (item, index) => {
     switch (item.type) {
       case "input":
-        return <Input />;
+        return (
+          <Form.Item key={index} {...item}>
+            <Input />
+          </Form.Item>
+        );
         break;
       case "password":
-        return <Input.Password />;
+        return (
+          <Form.Item key={index} {...item}>
+            <Input.Password />
+          </Form.Item>
+        );
         break;
       case "select":
         return (
-          <Select allowClear>
-            <Select.Option value="lucy">Lucy</Select.Option>
-            <Select.Option value="lusdfcy">sdf</Select.Option>
-          </Select>
+          <Form.Item key={index} {...item}>
+            <Select allowClear>
+              <Select.Option value="lucy">Lucy</Select.Option>
+              <Select.Option value="lusdfcy">sdf</Select.Option>
+            </Select>
+          </Form.Item>
         );
+        break;
+      default:
+        console.log("输入的数据有无");
         break;
     }
   };
@@ -34,13 +47,7 @@ const ModalFormCom = ({ formData, modal, onCancel, onOk }) => {
       okButtonProps={{ form: "ModalFormId", key: "submit", htmlType: "submit" }}
     >
       <Form id="ModalFormId" onFinish={onOk}>
-        {formData.map((item, index) => {
-          return (
-            <Form.Item key={index} {...item}>
-              {renderItem(item)}
-            </Form.Item>
-          );
-        })}
+        {formData.map((item, index) => renderItem(item, index))}
       </Form>
     </Modal>
   );
