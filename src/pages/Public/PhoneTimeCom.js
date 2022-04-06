@@ -3,7 +3,7 @@
  * Author: Yang PengFei
  */
 import React, { useState } from "react";
-import PhoneTimeCom from "../../components/PhoneTimeCom";
+
 const defaultData = {
   value: "获取验证码",
 };
@@ -26,11 +26,7 @@ const Index = () => {
       }
     }, 1000);
   };
-  return (
-    <div>
-      <PhoneTimeCom {...phoneData} getCode={getCode} />
-    </div>
-  );
+  return <div>公共页面</div>;
 };
 
 export default Index;

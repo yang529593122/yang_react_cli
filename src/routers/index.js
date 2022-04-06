@@ -3,12 +3,13 @@
  * Author: Yang PengFei
  */
 import React from "react";
-import { Route, Redirect, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import lazy from "./LazyComponent";
+
 const Nopage = () => import("../layout/404");
 const Login = () => import("../pages/Login");
 const BaseLayout = () => import("../layout/BaseLayout");
-const Public = () => import("../pages/Public/ModalFormCom");
+const Public = () => import("../pages/Public");
 export default () => {
   return (
     <Switch>
@@ -20,6 +21,7 @@ export default () => {
       />
       <Route path="/login" component={lazy(Login)} exact key="login" />
       <Route path="/app" component={lazy(BaseLayout)} key="app" />
+      <Route path="/public" component={lazy(Public)} key="Public" />
       <Route component={lazy(Nopage)} />
     </Switch>
   );

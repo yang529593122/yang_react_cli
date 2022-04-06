@@ -29,6 +29,7 @@ iframeRoutes.forEach((item0) => {
     routeList.push(item0);
   }
 });
+console.log(routeList, 222);
 const SubRoute = () => {
   return (
     <Switch>
