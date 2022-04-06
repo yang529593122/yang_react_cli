@@ -1,8 +1,17 @@
 {
-  "name": "hook_dome",
+  "name": "webgroup",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "node scripts/start.js REACT_APP_ENV=dev",
+    "build:test": "node scripts/build.js REACT_APP_ENV=test",
+    "build:pre": "node scripts/build.js REACT_APP_ENV=pre",
+    "build:prod": "node scripts/build.js REACT_APP_ENV=prod"
+  },
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@antv/g2": "^4.1.44",
+    "@antv/g2plot": "^2.4.8",
     "@babel/core": "7.12.3",
     "@craco/craco": "^6.1.2",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
@@ -29,11 +38,13 @@
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
     "eslint": "^7.11.0",
+    "eslint-config-prettier": "6.10.0",
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-flowtype": "^5.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.1.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "3.1.2",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-testing-library": "^3.9.2",
@@ -42,14 +53,17 @@
     "fs-extra": "^9.0.1",
     "html-webpack-plugin": "4.5.0",
     "identity-obj-proxy": "3.0.0",
+    "insert-css": "^2.0.0",
     "jest": "26.6.0",
     "jest-circus": "26.6.0",
     "jest-resolve": "26.6.0",
     "jest-watch-typeahead": "0.6.1",
+    "json-bigint": "^1.0.0",
     "koa": "^2.13.1",
     "koa-bodyparser": "^4.3.0",
     "koa-cors": "^0.0.16",
     "koa-router": "^10.0.0",
+    "less": "^4.1.1",
     "less-loader": "5.0.0",
     "mini-css-extract-plugin": "0.11.3",
     "optimize-css-assets-webpack-plugin": "5.0.4",
@@ -59,7 +73,10 @@
     "postcss-normalize": "8.0.1",
     "postcss-preset-env": "6.7.0",
     "postcss-safe-parser": "5.0.2",
+    "prettier": "2.0.1",
+    "progress-bar-webpack-plugin": "^2.1.0",
     "prompts": "2.4.0",
+    "qs": "^6.10.3",
     "react": "^17.0.2",
     "react-app-polyfill": "^2.0.0",
     "react-dev-utils": "^11.0.3",
@@ -80,21 +97,25 @@
     "webpack": "4.44.2",
     "webpack-dev-server": "3.11.1",
     "webpack-manifest-plugin": "2.2.0",
+    "webpackbar": "^5.0.2",
     "workbox-webpack-plugin": "5.1.4"
   },
-  "scripts": {
-    "start": "node scripts/start.js dev",
-    "build:test": "node scripts/build.js test",
-    "build:pre": "node scripts/build.js pre",
-    "build:prod": "node scripts/build.js prod",
-    "test": "node scripts/test.js",
-    "server": "node ./server/index.js"
-  },
   "eslintConfig": {
+    "plugins": [
+      "react-hooks"
+    ],
+    "rules": {
+      "react-hooks/exhaustive-deps": 0
+    },
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:prettier/recommended"
     ]
+  },
+  "resolutions": {
+    "//": "See https://github.com/facebook/create-react-app/issues/11773",
+    "react-error-overlay": "6.0.9"
   },
   "browserslist": {
     "production": [
@@ -161,15 +182,6 @@
   "babel": {
     "presets": [
       "react-app"
-    ],
-    "plugins": [
-      [
-        "import",
-        {
-          "libraryName": "antd",
-          "style": true
-        }
-      ]
     ]
   }
 }

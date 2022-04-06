@@ -6,13 +6,12 @@ import home from "./home";
  */
 
 // 用户模块
-export const user=[
-    {
-        path: '/app/user',
-        name:'user',
-        isLogin:true,
-        component: ()=> import('../../pages/User'),
-    }
-]
-export default user
-
+export const user = [
+  {
+    path: "/app/user",
+    name: "user",
+    isLogin: true,
+    component: () => import("../../pages/User"),
+  },
+];
+export default user;
