@@ -364,6 +364,10 @@ module.exports = function (webpackEnv) {
         // 文件路径别名
         "@": path.resolve(__dirname, "../src"),
         "@pages": path.resolve(__dirname, "../src/pages"),
+        "@api": path.resolve(__dirname, "../src/api"),
+        "@consts": path.resolve(__dirname, "../src/consts"),
+        "@layout": path.resolve(__dirname, "../src/layout"),
+        "@utils": path.resolve(__dirname, "../src/utils"),
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding
